@@ -12,7 +12,7 @@ grabAPIInformation = (api) => {
 // order the array using the "vehicle_model" property
 sortedArrayByVehicleModel = (vehicles) => {
   const sortedVehicles = vehicles.data.sort(compareVehicleName)
-  sortedVehicles.map(vehicle =>  appendVehicleAttributesToTable(vehicle))
+  sortedVehicles.map(vehicle => appendVehicleAttributesToTable(vehicle))
 }
 
 // compare function for the sorting function so that models are being orederd correctly
@@ -41,5 +41,5 @@ appendVehicleAttributesToTable = (vehicle) => {
     <td>${vehicleClass}</td>`
 }
 
-// call the function to make it work
+// call the function to run the app
 grabAPIInformation(apiEndpoint)

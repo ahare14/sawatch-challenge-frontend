@@ -1,6 +1,6 @@
 # sawatch-challenge-frontend
 
-This is app was created to fetch information from an API and have the resulting information displayed in an organized table showing: Year, Make, Model, Displacement, Cylinders, and Class.  There is a series of functions written in JavaScript ES6 to retrieve and sort the data by Model.  
+This app was created to fetch information from an API and have the resulting information displayed in an organized table showing: Year, Make, Model, Displacement, Cylinders, and Class.  There is a series of functions written in JavaScript ES6 to retrieve and sort the data by Model.  
 
 ## Installation
 
