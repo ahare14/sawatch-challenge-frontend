@@ -1,6 +1,6 @@
 # sawatch-challenge-frontend
 
-This is app was created to fetch information from an API and have the resulting information displayed in an organized table showing: Year, Make, Model, Displacement, Cylinders, and Class.  There is a series of functions written in ES6 to restrieve and sort the data by Model.  
+This is app was created to fetch information from an API and have the resulting information displayed in an organized table showing: Year, Make, Model, Displacement, Cylinders, and Class.  There is a series of functions written in JavaScript ES6 to retrieve and sort the data by Model.  
 
 ## Installation
 
@@ -9,3 +9,9 @@ This is app was created to fetch information from an API and have the resulting 
   - this will allow you to avoid installing the npm package to your machine
   - this looks for the `bs-config.json` file to load the `sawatch-challenge.html`
 3. Navigate to the browser that is opened when `lite-server` is run and enjoy
+
+## Example Screenshot
+
+Below is what should be displaying:
+
+![Alt text](example_screenshot.png "example screenshot")
