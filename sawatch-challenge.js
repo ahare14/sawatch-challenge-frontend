@@ -9,13 +9,13 @@ grabAPIInformation = (api) => {
     .catch(error => console.error(error))
 }
 
-// order the array using the "vehicle_model" property
+// order the array using the "vehicle_model" property and call append function
 sortedArrayByVehicleModel = (vehicles) => {
   const sortedVehicles = vehicles.data.sort(compareVehicleName)
   sortedVehicles.map(vehicle => appendVehicleAttributesToTable(vehicle))
 }
 
-// compare function for the sorting function so that models are being orederd correctly
+// compare function for the sorting function so that models are being ordered correctly
 compareVehicleName = (vehicle1, vehicle2) => {
   let compareValue = 0 
   if (vehicle1.vehicle_model > vehicle2.vehicle_model) {
