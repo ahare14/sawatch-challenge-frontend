@@ -5,13 +5,13 @@ This is app was created to fetch information from an API and have the resulting 
 ## Installation
 
 1. Clone the repo to your local machine
-2. Run `npx lite-server` 
-  - this will allow you to avoid installing the npm package to your machine
+2. Then run `npm install lite-server`
+3. To have it load the HTML run `npx lite-server` 
   - this looks for the `bs-config.json` file to load the `sawatch-challenge.html`
-3. Navigate to the browser that is opened when `lite-server` is run and enjoy
+4. Navigate to the browser that is opened when `lite-server` is run and enjoy
 
 ## Example Screenshot
 
-Below is what should be displaying:
+Below is an example what should be displaying:
 
 ![Alt text](example_screenshot.png "example screenshot")

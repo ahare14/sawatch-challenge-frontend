@@ -12,7 +12,7 @@ grabAPIInformation = (api) => {
 // order the array using the "vehicle_model" property
 sortedArrayByVehicleModel = (vehicles) => {
   const sortedVehicles = vehicles.data.sort(compareVehicleName)
-  sortedVehicles.forEach(vehicle =>  appendVehicleAttributesToTable(vehicle))
+  sortedVehicles.map(vehicle =>  appendVehicleAttributesToTable(vehicle))
 }
 
 // compare function for the sorting function so that models are being orederd correctly
@@ -30,16 +30,12 @@ compareVehicleName = (vehicle1, vehicle2) => {
 //  year, make, model, displacement, cylinders, class are showing
 appendVehicleAttributesToTable = (vehicle) => {
   const newVehicleRow = sawatchTable.insertRow(-1)
-  const year = vehicle.vehicle_year
-  const make = vehicle.make
-  const model =vehicle.vehicle_model
-  const displacement = vehicle.displacement
-  const cylinders = vehicle.cylinders
+  const { vehicle_year, make, vehicle_model, displacement, cylinders } = vehicle
   const vehicleClass = vehicle.class
   newVehicleRow.innerHTML = 
-    `<td>${year}</td>
+    `<td>${vehicle_year}</td>
     <td>${make}</td>
-    <td>${model}</td>
+    <td>${vehicle_model}</td>
     <td>${displacement}</td>
     <td>${cylinders}</td>
     <td>${vehicleClass}</td>`
