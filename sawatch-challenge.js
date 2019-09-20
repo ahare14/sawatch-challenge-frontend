@@ -4,11 +4,10 @@ const sawatchTable = document.querySelector("#swt-table-body")
 // grab the information from the API endpoint so that it readily available for manipulation 
 grabAPIInformation = (api) => {
   fetch(api)
-  .then(response => response.json())
-  .then(result => sortedArrayByVehicleModel(result))
-  .catch(error => console.error(error))
+    .then(response => response.json())
+    .then(result => sortedArrayByVehicleModel(result))
+    .catch(error => console.error(error))
 }
-
 
 // order the array using the "vehicle_model" property
 sortedArrayByVehicleModel = (vehicles) => {
@@ -20,9 +19,9 @@ sortedArrayByVehicleModel = (vehicles) => {
 compareVehicleName = (vehicle1, vehicle2) => {
   let compareValue = 0 
   if (vehicle1.vehicle_model > vehicle2.vehicle_model) {
-    compareValue = -1
-  } else if (vehicle1.vehicle_model < vehicle2.vehicle_model) {
     compareValue = 1
+  } else if (vehicle1.vehicle_model < vehicle2.vehicle_model) {
+    compareValue = -1
   }
   return compareValue
 }
@@ -30,7 +29,7 @@ compareVehicleName = (vehicle1, vehicle2) => {
 // finally append table rows to the existing table so that:
 //  year, make, model, displacement, cylinders, class are showing
 appendVehicleAttributesToTable = (vehicle) => {
-  const newVehicleRow = sawatchTable.insertRow(0)
+  const newVehicleRow = sawatchTable.insertRow(-1)
   const year = vehicle.vehicle_year
   const make = vehicle.make
   const model =vehicle.vehicle_model
@@ -38,12 +37,12 @@ appendVehicleAttributesToTable = (vehicle) => {
   const cylinders = vehicle.cylinders
   const vehicleClass = vehicle.class
   newVehicleRow.innerHTML = 
-  `<td>${year}</td>
-  <td>${make}</td>
-  <td>${model}</td>
-  <td>${displacement}</td>
-  <td>${cylinders}</td>
-  <td>${vehicleClass}</td>`
+    `<td>${year}</td>
+    <td>${make}</td>
+    <td>${model}</td>
+    <td>${displacement}</td>
+    <td>${cylinders}</td>
+    <td>${vehicleClass}</td>`
 }
 
 // call the function to make it work
